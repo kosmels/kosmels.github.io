@@ -2,3 +2,10 @@ name: Silvester Kosmel, Student
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 e-mail: kosmel.s@gmail.com
+
+collections:
+  skills:
+    output: true
+    permalink: /skills/:path/
+  projects:
+    output: true
