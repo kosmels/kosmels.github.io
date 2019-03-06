@@ -43,16 +43,31 @@ ul.posts li {
     list-style: none;
 }
 */
+
 body {
-    margin: 0
+    margin: 0;
 }
 
-html, body {
-    background: #011526;
+body, html {
+    background: #f8f9fa;
 }
 
 footer {
-    background: #011526
+    background: #f8f9fa;
+}
+
+header {
+    background-color: white
+}
+
+.index-info {
+    font-size: 18px;
+    max-width: 50%;
+}
+
+.task-text {
+    padding: 10%;
+    font-family: Times New Roman, Verdana, Arial,sans-serif;
 }
 
 .skill-text {
@@ -62,8 +77,29 @@ footer {
 }
 
 .profile {   
-    max-width: 40%;
+    max-width: 30%;
     height: auto;  
+}
+
+.float-right {
+    float: right;
+    padding-right: 15%;
+    font-size: 18px;
+}
+
+.menu-padd {
+    padding-right: 15px;
+    color: black;
+}
+
+
+.float-left, .float-left:hover {
+    float: left;
+    padding-left: 15%;
+    text-decoration: none !important;
+    font-size: 30px;
+    color: black;
+    font-family: Bodoni MT, Verdana, Arial,sans-serif;
 }
 
 .image-pad {
@@ -87,7 +123,15 @@ footer {
 
 .box-center {
     text-align: center;
-    margin-left: 15px;
+    margin-left: 55px;
+}
+
+.green-text {
+    color: green;
+}
+
+.orange-text {
+    color: orange;
 }
 
 .social:hover {
@@ -97,7 +141,6 @@ footer {
  }
  .social {
      -webkit-transform: scale(0.8);
-     /* Browser Variations: */
      
      -moz-transform: scale(0.8);
      -o-transform: scale(0.8);
@@ -105,10 +148,6 @@ footer {
      -moz-transition-duration: 0.5s;
      -o-transition-duration: 0.5s;
  }
-
-/*
-    Multicoloured Hover Variations
-*/
  
  #social-fb:hover {
      color: #3B5998;
@@ -116,3 +155,61 @@ footer {
  #social-em:hover {
      color: #b23121;
  }
+
+.lib-panel {
+    margin-bottom: 20Px;
+}
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header {
+    background-color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 7px 0 7px 0;
+}
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 13px;
+}
+.lib-panel .lib-row.lib-desc a{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+}
+
+.no-padding {
+    padding: 0;
+}

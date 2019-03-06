@@ -2,60 +2,65 @@
 layout: default
 title: Skills
 ---
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+		  <div class="card mb-4 shadow-sm">
+		    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../img/edu.jpg" data-holder-rendered="true">
+		    <div class="card-body">
+		      <h1 class="skill-text">Education</h1>
 
-<div class="row">
+			{% assign educations = site.skills | where: "usage", "Study" %}
 
+			{% for edu in educations %}
+				<div class="justify-content-between align-items-center">
+			        <div class="btn-group">
+			          <a class="nav-link" href="{{edu.link}}" target="_blank">{{edu.type}}</a>
+			        </div>
+			        <small class="text-muted">{{edu.skill-level}}</small>
+			     </div>
+			{% endfor %}
 
-	<div class="col-md-4">
-	  <div class="card mb-4 shadow-sm">
-	    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="../img/edu.jpg" data-holder-rendered="true">
-	    <div class="card-body">
-	      <h1 class="skill-text">Education</h1>
-	      <div class="justify-content-between align-items-center">
-	        <div class="btn-group">
-	          <a class="nav-link" href="https://www.gabnam.sk/" target="_blank">Anton Bernolak Gymnasium</a>
-	        </div>
-	        <small class="text-muted">8 years</small>
-	        <div class="btn-group">
-	          <a class="nav-link" href="https://www.fiit.stuba.sk/en.html?page_id=749" target="_blank">Slovak University of Technology</a>
-	        </div>
-	        <small class="text-muted">Currently</small>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+		    </div>
+		  </div>
+		</div>
 
+		<div class="col-md-4">
+		  <div class="card mb-4 shadow-sm">
+		    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/prog_lang.jpeg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+		    <div class="card-body">
+		      <h1 class="skill-text">Programming</h1>
+		      <div class="justify-content-between align-items-center">
+		        <div class="btn-group box-center">
+		        	{% assign programs = site.skills | where: "usage", "Programming language" %}
+		        	{% assign webs = site.skills | where: "usage", "Web development" %}
+		        	{% assign databases = site.skills | where: "usage", "Database systems" %}
+		        	{% assign things = programs | concat: webs | concat: databases | sort: "skill-level" | reverse %}
 
-	<div class="col-md-4">
-	  <div class="card mb-4 shadow-sm">
-	    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/prog_lang.jpeg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-	    <div class="card-body">
-	      <h1 class="skill-text">Programming</h1>
-	      <div class="justify-content-between align-items-center">
-	        <div class="btn-group box-center">
-	          	{% for skill in site.skills %}
-	    			<li><p>{{skill.type}} -> {{skill.usage}} -> {{skill.skill-level}}</p></li>
-	  			{% endfor %}
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+		        	{% for program in things %}
+		        		<p>{{program.type}} | {{program.usage}}</p>
+		    			<p {% if program.skill-level == "Beginner" %}class="orange-text"{% endif %} class="green-text"><strong>{{program.skill-level}}</strong></p>
+		        	{% endfor %}
 
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
-	<div class="col-md-4">
-	  <div class="card mb-4 shadow-sm">
-	    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/dl.jpeg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-	    <div class="card-body">
-	      <h1 class="skill-text">Deep learning</h1>
-	      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Primary card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-	    </div>
-	  </div>
-	</div>
+		<div class="col-md-4">
+		  <div class="card mb-4 shadow-sm">
+		    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../img/dl.jpeg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+		    <div class="card-body">
+		      <h1 class="skill-text">Deep learning</h1>
+		      <div class="card border-light mb-3" style="max-width: 18rem; margin-left: 22%; text-align: center;">
+				  <div class="card-header">Music Informtaion Retrieval</div>
+				  <div class="card-body text-primary">
+				    <p class="card-text" style="text-align: center;">Bachelor thesis - Processing Music using Methods of Artificial Intelligence</p>
+				  </div>
+			  </div>
+		    </div>
+		  </div>
+		</div>
+	</div>	
 </div>
