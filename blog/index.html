@@ -4,6 +4,22 @@ title: My Blog
 ---
 <div class="container">
 	<h1>{{ page.title }}</h1>
+	
+	<!---
+	{% assign years = site.posts | group_by: "year" %}
+	{% for y in years %}
+	<p>{{y.name}}</p>
+		<ul>
+		  {% for post in site.posts %}
+		  <p>{{post.year}} {{y.name}}</p>
+		    {% if {{post.year}} == {{y.name}} %}
+	    		<p>TRY</p>
+			{% endif %}
+		  {% endfor %}
+		</ul>
+	{% endfor %}
+	--->
+
 	<ul>
 
 	  {% for post in site.posts %}
