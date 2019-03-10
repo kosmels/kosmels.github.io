@@ -9,3 +9,5 @@ collections:
     permalink: /skills/:path/
   projects:
     output: true
+
+plugins: [jekyll-youtube]
