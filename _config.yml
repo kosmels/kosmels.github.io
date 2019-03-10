@@ -10,4 +10,4 @@ collections:
   projects:
     output: true
 
-plugins: [jekyll-youtube]
+# plugins: [jekyll-youtube]
